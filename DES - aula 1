@@ -1,0 +1,34 @@
+Exercicio 1
+$nome = ("Natiele");
+ echo "olá $nome ! Bem vindo ao aprendizado de PHP";
+
+Exercicio 2
+  $nome_completo = ("Natiele Alves Gomes da Silva");
+  $idade = ("27 anos");
+  $altura = ("1,56");
+  $estudante = ("sim");
+  
+ readline("insira seu nome de usuário");
+printf("Seja bem-vindo");
+
+Exercicio 3 
+$nome = readline("Digite seu nome:");
+printf("seja bem vindo $nome");
+
+Exercicio 4
+$numero1 = readline("\ndigite um numero inteiro:");
+$numero2 = readline("digite um numero inteiro:");
+$soma = $numero1 + $numero2;
+printf("A soma dos números digitados é: ($soma)");
+
+Exercicio 5
+$primeiranota = readline("digite a nota:");
+$segundanota = readline("digite a nota:");
+$terceiranota = readline("digite a nota:");
+$media = ($primeiranota + $segundanota + $terceiranota)/3;
+printf("a media das notas é:($media)");
+
+
+
+
+
