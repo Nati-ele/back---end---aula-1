@@ -1,0 +1,61 @@
+exercicio 1 
+$numero1 = readline("Digite um número:");
+$numero2 = readline("Digite um número:");
+$soma = "$numero1 + $numero2";
+$subtração = "$numero1 - $numero2";
+$multiplicação = "$numero1 * $numero2";
+$divisão = "$numero1 / $numero2";
+$resto = "$numero1 % $numero2";
+$total = ("$soma - $subtração * $multiplicação / $divisão % $resto");
+var_dump($total);
+
+exercicio 2 
+<?php
+
+
+$mensagem1 = "olá";
+$mensagem2 = "mundo do PHP";
+echo $mensagem1 . " " . $mensagem2;
+
+exercicio 3
+$valor1 = "10";
+$valor2 = 10;
+var_dump($valor1 == $valor2);
+var_dump($valor1 === $valor2);
+
+exercicio 4 
+$a = "10";
+$b = "20";
+
+exercicio 5
+
+$nota = readline("coloque a nota:");
+if ($nota >= 7){
+ echo ("aprovado");
+}
+  elseif ($nota <= 7){
+   echo ("reprovado");
+}
+
+exercicio 6 
+<?php
+$dia = readline("insira um dia:");
+$dia1 = "Domingo";
+$dia2 = "Segunda-feira";
+switch ($dia1){
+    case "Domingo";
+    echo "Hoje e domingo";
+    break;
+    case ($dia2);
+    echo "hoje é segunda-feira";
+    break;
+    default;
+    echo "Não sei que dia é hoje";
+}
+
+exercicio 7 
+<?php
+$possuiingresso = true;
+$estaacompanhado = true;
+
+$condição = ($possuiIngresso && !$estaAcompanhado) ? "entrada liberada" : "entrada negada");
