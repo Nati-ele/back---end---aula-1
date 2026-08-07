@@ -1,0 +1,39 @@
+exercicio 9
+<?php
+
+$n=1;
+while ($n <= 10){
+    echo $n;
+    $n++;
+}
+    printf ("Fogo");
+
+exercicio 10
+<?php
+
+$tentativa=1;
+do{
+    readline ("Tentativa numero:");
+    echo $tentativa;
+    $tentativa++;
+}while ($tentativa <=3);
+
+exercicio 11
+<?php
+
+$multiplicador = 2;
+for($n=1; $n <=10; $n++){
+    $resultado = $n * $multiplicador;
+    echo "$resultado./";
+}
+
+exercicio 12
+<?php
+
+$nomep = readline ("insira o produto desejado:");
+$valor = array("camiseta => 49.90
+Calça => 89.90
+Tênis => 199.90");
+foreach ($valor as $key){
+    echo "O preço do produto $nomep custa R$:$key";
+}
