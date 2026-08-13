@@ -1,6 +1,39 @@
+Exercicio 1
+function saudarusuario($nome){
+    $nome = Natiele;
+}
+    echo ("Olá, ($nome)! Seja bem-vindo ao curso de PHP.");
+
+Exercicio 2
+function multiplicaçao($a,$b){
+    
+   $total = $a * $b;
+   return $total;
+}
+    echo multiplicaçao(10,5);
+
+function multiplicaçao($a,$b){
+    
+   $total = $a * $b;
+   return $total;
+}
+    echo multiplicaçao(10,5);
+
+function multiplicaçao($a,$b){
+    
+   $total = $a * $b;
+   return $total;
+}
+    echo multiplicaçao(10,5)
+
+Exercicio3
 <?php
 
-$nome=("natiele");
-function saudarusuario($nome){
-    echo ("Olá, ($nome)! Seja bem-vindo ao curso de PHP.");
+function divisao($num1,$num2){
+    $par = $num1 %2 == 0;
+    $impar = $num2 %2 == 1;
+    return $par;
+    return $impar;
 }
+echo $divisao
+echo $divisao
