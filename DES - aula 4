@@ -1,0 +1,6 @@
+<?php
+
+$nome=("natiele");
+function saudarusuario($nome){
+    echo ("Olá, ($nome)! Seja bem-vindo ao curso de PHP.");
+}
