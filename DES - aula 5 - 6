@@ -1,0 +1,93 @@
+<?php
+// exercicio 4:calculadora de retângulos
+//crie uma clesse retangulo para representar formas geométricas simples.
+//1.atributos privados:largura e altura(floats) 2.método construtor que aceita esses dois valores.
+//3.método calculararea() e calcular perimetro() 4.método isquadrado() que verifica se a largura é igual a altura
+
+
+class Triangulo{
+    private float $largura;
+    private float $altura;
+    
+    public function __construct(float $largura, float $altura){
+        $this->largura = $largura;
+        $this->altura = $altura;
+    }
+    public function getLargura(): float {
+        return $this->largura;
+    }
+
+    public function setLargura(float $largura): void {
+        $this->largura = $largura;
+    }
+
+    public function getAltura(): float {
+        return $this->altura;
+    }
+
+    public function setAltura(float $altura): void {
+        $this->altura = $altura;
+    }   
+        public function calcularArea(): float {
+        return ($this->largura * $this->altura) / 2;
+    }
+}
+
+
+$meuTriangulo = new Triangulo(20,5);
+echo "Largura: " . $meuTriangulo->getLargura() . "\n";
+echo "Altura: " . $meuTriangulo->getAltura() . "\n";
+echo "Área: " . $meuTriangulo->calcularArea() . "\n";
+
+<?php
+//exercicio 5:sistema de lampada e estado
+//modele uma classe lampada que simule o comportamento de um dispositivo elétrico
+//1.atributo privado ligada(bool)com valor inicial false
+//2.métodos ligar() e desligar ()
+//3.métodos observar() que retorna a string "a lâmpada está ligada" ou "a lâmpada está desligada"
+class Lampada {
+    private bool $ligada = false;
+
+    public function ligar(): void {
+        $this->ligada = true;
+    }
+
+    public function desligar(): void {
+        $this->ligada = false;
+    }
+
+    public function observar(): string {
+        if ($this->ligada) {
+            return "A lâmpada está ligada";
+        }
+        return "A lâmpada está desligada";
+    }
+}
+
+//exercico 6: contador de instâncias com atributo estático
+//crie uma classe Acessosistema para monitorar quantos acessos foram criados na execução
+//1.atributo estático privado $total acessos
+//2.no construtor da classe, incremente este atributo estático
+//3.crie um método estático público getTotalAcessos() para consultar o total
+
+<?php
+
+class AcessoSistema {
+    
+    private static $totalAcessos = 0;
+    public function __construct() {
+        self::$totalAcessos++;
+    }
+    public static function getTotalAcessos() {
+        return self::$totalAcessos;
+    }
+}
+echo "Acessos iniciais: " . AcessoSistema::getTotalAcessos() . PHP_EOL; 
+
+$acesso1 = new AcessoSistema();
+$acesso2 = new AcessoSistema();
+$acesso3 = new AcessoSistema();
+
+echo "Total de acessos após execuções: " . AcessoSistema::getTotalAcessos() . PHP_EOL; 
+
+
