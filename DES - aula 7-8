@@ -1,0 +1,126 @@
+<?php
+//exercicio 5:
+
+class lampada{
+    private bool $ligada = false;
+    
+    public function ligar(){
+      this->ligada = true; 
+    }
+    public function ligar(){
+      this->ligada = false; 
+    }
+    public function observar() : string{
+        if (this->ligada){
+        return "A lâmpada está ligada";
+    }
+    return "A lâmpada está desligada";
+    }
+}
+
+//exercicio 6
+
+class AcessoSistema{
+  private static $totalacessos = 0;
+  public function __construct(){
+        self::$totalacessos++;
+  }
+  public static function gettotalacessos(){
+        return self::$totalacessos;
+  }
+  public static function getTotalAcessos(){
+        return self::$totalacessos;
+  }
+}
+//exercicio 7
+
+class livro{
+    private string $titulo;
+    private string $autor;
+    private bool $disponivel;
+      public function __construct(string $titulo, string $autor){
+        $this->titulo = $titulo;
+        $this->autor = $autor;
+        $this->disponivel = true;
+      }
+        public function emprestar(): void{
+        if (this->disponivel){
+            $this->diponivel = false;
+            echo "O livro '{$this->titulo}' foi emprestado.\n";
+             else {
+               echo "Erro: O livro '{$this->titulo}' ja foi emprestado.\n";
+          }
+        }        
+        } 
+         public function devolver(): void{
+        if ($this->disponivel){
+            $this->disponivel = true;
+            echo "O livro '{$this->titulo}' foi devolvido e agora está disponível.\n";
+        } else {
+            echo "Aviso: O livro '{$this->titulo}' já constava disponível.\n";
+        }
+    }
+}
+
+//exercicio 7
+
+class livro{
+    private string $titulo;
+    private string $autor;
+    private bool $disponivel;
+      public function __construct(string $titulo, string $autor){
+        $this->titulo = $titulo;
+        $this->autor = $autor;
+        $this->disponivel = true;
+      }
+        public function emprestar(): void{
+        if (this->disponivel){
+            $this->diponivel = false;
+            echo "O livro '{$this->titulo}' foi emprestado.\n";
+             else {
+               echo "Erro: O livro '{$this->titulo}' ja foi emprestado.\n";
+          }
+        }        
+        } 
+         public function devolver(): void{
+        if ($this->disponivel){
+            $this->disponivel = true;
+            echo "O livro '{$this->titulo}' foi devolvido e agora está disponível.\n";
+        } else {
+            echo "Aviso: O livro '{$this->titulo}' já constava disponível.\n";
+        }
+    }
+}
+//exercicio 8
+
+class Funcionario {
+    protected string $nome;
+    protected float $salarioBase;
+    public function __construct(string $nome, float $salarioBase) {
+        $this->nome = $nome;
+        $this->salarioBase = $salarioBase;
+    }
+    public function calcularSalario(): float {
+        return $this->salarioBase;
+    }
+    public function getNome(): string {
+        return $this->nome;
+    }
+}
+class Gerente extends Funcionario {
+    private float $bonus;
+    public function __construct(string $nome, float $salarioBase, float $bonus) {
+        parent::__construct($nome, $salarioBase);
+        $this->bonus = $bonus;
+    }
+    public function calcularSalario(): float {
+        return $this->salarioBase + $this->bonus;
+    }
+}
+
+$funcionario comum = new Funcionario("Carlos", 3000.00);
+echo "Funcionário: " . $funcionarioComum->getNome() . "\n";
+echo "Salário: R$ " . number_format($funcionarioComum->calcularSalario(), 2, ',', '.') . "\n\n";
+$gerente = new Gerente("Ana Costa", 7000.00, 2500.00);
+echo "Gerente: " . $gerente->getNome() . "\n";
+echo "Salário com Bônus: R$ " . number_format($gerente->calcularSalario(), 2, ',', '.') . "\n";
