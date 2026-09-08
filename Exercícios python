@@ -1,0 +1,123 @@
+Exercício 1 VARIÁVEIS
+Crie um programa que declare duas variáveis numéricas, calcule a soma, subtração, multiplicação e divisão
+entre elas e exiba os resultados.
+
+variavel1 = 10
+variavel2 = 12
+
+soma = variavel1 + variavel2
+subtração = variavel1 - variavel2
+multiplicação = variavel1 * variavel2
+divisão = variavel1 / variavel2
+
+print (f"A soma dos números é:{soma}")
+print (f"A subtração dos números é:{subtração}")
+print (f"A multiplicação dos números é:{multiplicação}")
+print (f"A divisão dos números é:{divisão}")
+
+Exercício 2 VARIÁVEIS & CONDICIONAIS
+Leia a idade de uma pessoa e informe se ela é maior de idade (18 anos ou mais) ou menor de idade.
+
+idade = int(input("Insira sua idade:"))
+
+if idade >= 18:
+ print("Você é maior de idade!")
+elif idade <= 18:
+ print("Você é menor de idade!")
+
+Exercício 3 CONDICIONAIS
+Faça um script que receba três notas de um aluno, calcule a média e exiba "Aprovado" (média ≥ 7.0),
+"Recuperação" (média entre 5.0 e 6.9) ou "Reprovado" (média < 5.0).
+
+nota1 = float(input("Insira sua nota:"))
+nota2 = float(input("Insira sua nota:"))
+nota3 = float(input("Insira sua nota:"))
+
+media = (nota1 + nota2 + nota2) /3
+
+if media >= 7.0:
+ print("Aluno aprovado!")
+elif media >= 5.0:
+ print("Aluno em recuperação!")
+else:
+ print("Aluno reprovado!")
+
+Exercício 4 CONDICIONAIS
+Escreva um programa que verifique se um número inteiro fornecido pelo usuário é par ou ímpar.
+
+numero = int(input("Insira um número:"))
+
+if numero % 2 == 0:
+ print("O número é par")
+else:
+ print("O número é ímpar")
+
+Exercício 5 LAÇO WHILE
+Crie um contador de 1 a 10 usando a estrutura while e exiba os números na tela.
+
+contador = 0
+
+while (contador < 10):
+ print (contador)
+ contador = contador + 1
+else:
+ print ("loop encerrado!")
+
+Exercício 6 LAÇO WHILE
+Escreva um programa que peça uma senha ao usuário até que ele digite a senha correta (ex:
+"python123" ).
+
+senha_correta = "python123"
+entrada = ""
+while entrada != senha_correta:
+    entrada = input("Digite a senha: ")
+print("Senha correta!!")
+
+Exercício 7 LAÇO FOR / FOREACH
+Crie um programa que imprima a tabuada do número 5 (de 1 a 10) utilizando o laço for
+
+for i in range(1, 11):
+    resultado = 5 * i
+    print(f"5 x {i} = {resultado}")
+
+Exercício 8 LAÇO FOR / FOREACH
+Dada a lista frutas = ["maçã", "banana", "laranja", "uva"] , use um laço for para exibir cada
+fruta em letras maiúsculas.
+
+frutas = ["maçã", "banana", "laranja", "uva"]
+
+for fruta in frutas:
+    print(fruta.upper())
+
+Exercício 9 VETORES / LISTAS
+Escreva um script que leia 5 números inteiros, armazene-os em uma lista e exiba a soma de todos os
+elementos.
+
+numeros = []
+
+for i in range(5):
+    valor = int(input(f"Digite o {i+1}º número inteiro: "))
+    numeros.append(valor)
+
+soma_total = sum(numeros)
+
+print(f"Os números digitados foram: {numeros}")
+print(f"A soma de todos os elementos é: {soma_total}")
+
+Exercício 10 FUNÇÕES
+Crie uma função chamada calcular_area_retangulo(base, altura) que receba dois parâmetros e
+retorne a área do retângulo.
+
+base = int(input("Digite um número:"))
+altura = int(input("Digite um número:"))
+def calcular_area_retangulo(base, altura):
+    return base * altura
+resultado = calcular_area_retangulo(base, altura)
+print(resultado) 
+
+def calcular_area_retangulo(base, altura):
+    return base * altura
+base = int(input("Digite um número:"))
+altura = int(input("Digite um número:"))
+resultado = calcular_area_retangulo(base,altura)
+print(resultado)
