@@ -121,3 +121,174 @@ base = int(input("Digite um número:"))
 altura = int(input("Digite um número:"))
 resultado = calcular_area_retangulo(base,altura)
 print(resultado)
+
+Exercício 11 VETORES & CONDICIONAIS
+Escreva um programa que receba uma lista com 8 números inteiros e retorne o maior e o menor valor
+presente nela, sem usar as funções max() e min() .
+
+numeros = []
+print("Digite 8 números inteiros:")
+
+for i in range(8):
+    num = int(input(f"Digite o {i+1}º número: "))
+    numeros.append(num)
+
+maior = numeros[0]
+menor = numeros[0]
+
+for num in numeros:
+    if num > maior:
+        maior = num
+    if num < menor:
+        menor = num
+
+print(f"\nA lista digitada foi: {numeros}")
+print(f"O maior valor é: {maior}")
+print(f"O menor valor é: {menor}")
+
+Exercício 12 LAÇO FOR & VETORES
+Crie um script que receba uma lista de números inteiros e gere uma segunda lista contendo apenas os
+números pares da primeira.
+
+def filtrar_pares(lista_numeros):
+    
+    return [numero for numero in lista_numeros if numero % 2 == 0]
+
+numeros_originais = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+apenas_pares = filtrar_pares(numeros_originais)
+
+print("Lista original:", numeros_originais)
+print("Apenas pares:", apenas_pares)
+
+Exercício 13 LAÇO WHILE & LÓGICA
+Escreva um programa que calcule o fatorial de um número inteiro informado pelo usuário utilizando um laço
+while .
+
+numero = int(input("Digite um número inteiro: "))
+
+fatorial = 1
+contador = numero
+
+if numero < 0:
+    print("Não existe fatorial de número negativo.")
+else:
+    while contador > 1:
+        fatorial *= contador
+        contador -= 1
+        
+    print(f"O fatorial de {numero} é {fatorial}.")
+
+Exercício 14 VETORES & BUSCA
+Crie um programa que armazene 10 nomes em uma lista e permita ao usuário buscar por um nome. O
+programa deve informar se o nome está presente ou não na lista.
+
+lista_nomes = [
+    "Maria", "Bruno", "Carlos", "Antonia", "Pedro", 
+    "Fernanda", "Gabriel", "Julia", "Igor", "Samanta"
+]
+
+nome_busca = input("Digite o nome que deseja buscar: ")
+
+nome_busca_formatado = nome_busca.strip().capitalize()
+
+if nome_busca_formatado in lista_nomes:
+    print(f"O nome '{nome_busca}' ESTÁ presente na lista.")
+else:
+    print(f"O nome '{nome_busca}' NÃO foi encontrado na lista.")
+
+Exercício 15 MATRIZES
+Escreva um programa que crie uma matriz 3 × 3 preenchida com zeros e, em seguida, altere os elementos
+da diagonal principal para o valor 1. Imprima a matriz resultante.
+
+matriz = [,
+ ,
+    [0, 0, 0]
+]
+
+for i in range(3):
+    matriz[i][i] = 1
+
+for linha in matriz:
+    print(linha)
+
+Exercício 16 MATRIZES & LAÇOS
+Escreva um script que receba uma matriz 2 × 3 de números inteiros e calcule a soma de todos os seus
+elementos utilizando laços aninhados ( for ).
+
+matriz = [,
+    [1, 6, 4]
+]
+
+soma_total = 0
+
+for i in range(len(matriz)):
+   
+    for j in range(len(matriz[i])):
+        soma_total += matriz[i][j]
+print(f"A soma de todos os elementos da matriz é: {soma_total}")
+
+Exercício 17 FUNÇÕES & CONDICIONAIS
+Crie uma função eh_primo(numero) que receba um número inteiro e retorne True se o número for primo
+e False caso contrário.
+
+def n_primo(numero):
+    
+    if numero <= 1:
+        return False
+    
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False  
+            
+    return True  
+
+print(n_primo(7))   
+print(n_primo(10))  
+print(n_primo(1))  
+
+Exercício 18 FUNÇÕES & LISTAS
+Desenvolva uma função que receba uma lista de números e retorne a média aritmética simples dos valores
+contidos nela.
+
+def calcular_media(lista_numeros):
+   
+    if not lista_numeros:
+        return 0
+    
+    soma = sum(lista_numeros)
+    
+    quantidade = len(lista_numeros)
+    
+    return soma / quantidade
+
+Exercício 19 MATRIZES & FUNÇÕES
+Crie uma função que receba uma matriz quadrada (N × N) e retorne a soma dos elementos contidos em sua
+diagonal secundária.
+
+def soma_diagonal_secundaria(matriz):
+    n = len(matriz)
+    soma = 0
+    
+    for i in range(n):
+       
+        soma += matriz[i][n - 1 - i]
+        
+    return soma
+
+minha_matriz = [,  
+    [7, 8, 9]   
+]
+
+resultado = soma_diagonal_secundaria(minha_matriz)
+print(f"A soma dos elementos da diagonal secundária é: {resultado}")
+
+Exercício 20 INTEGRAÇÃO TOTAL
+Escreva um sistema simples de cadastro de alunos:
+Crie uma função para cadastrar nome e 3 notas de alunos em uma estrutura de dados.
+Crie uma função para listar todos os alunos com suas respectivas médias e status ("Aprovado" ou
+"Reprovado").
+Utilize um laço while com um menu interativo para o usuário escolher entre cadastrar, listar ou sair.
+
+
+
+
